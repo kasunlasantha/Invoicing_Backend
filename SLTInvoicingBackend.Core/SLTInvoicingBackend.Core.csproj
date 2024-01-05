@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C22A39AE-6A48-4028-9197-8CAF81130679}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SLTInvoicingBackend.Core</RootNamespace>
+    <AssemblyName>SLTInvoicingBackend.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationServices\IBillingcenterService.cs" />
+    <Compile Include="ApplicationServices\ICashierService.cs" />
+    <Compile Include="ApplicationServices\IDefectgoodService.cs" />
+    <Compile Include="ApplicationServices\IEquipmentService.cs" />
+    <Compile Include="ApplicationServices\IGRNDataService.cs" />
+    <Compile Include="ApplicationServices\IInvoiceService.cs" />
+    <Compile Include="ApplicationServices\IPurposeofuseService.cs" />
+    <Compile Include="ApplicationServices\IQuotationService.cs" />
+    <Compile Include="ApplicationServices\IReturngoodService.cs" />
+    <Compile Include="ApplicationServices\IStockService.cs" />
+    <Compile Include="ApplicationServices\ITaxService.cs" />
+    <Compile Include="ApplicationServices\ITransactionTypeService.cs" />
+    <Compile Include="ApplicationServices\Services\BillingcenterService.cs" />
+    <Compile Include="ApplicationServices\Services\CashierService.cs" />
+    <Compile Include="ApplicationServices\Services\DefectgoodService.cs" />
+    <Compile Include="ApplicationServices\Services\EquipmentService.cs" />
+    <Compile Include="ApplicationServices\Services\GRNDataService.cs" />
+    <Compile Include="ApplicationServices\Services\InvoiceService.cs" />
+    <Compile Include="ApplicationServices\Services\PurposeofuseService.cs" />
+    <Compile Include="ApplicationServices\Services\QuotationService.cs" />
+    <Compile Include="ApplicationServices\Services\ReturngoodService.cs" />
+    <Compile Include="ApplicationServices\Services\StockService.cs" />
+    <Compile Include="ApplicationServices\Services\TaxService.cs" />
+    <Compile Include="ApplicationServices\Services\TransactionTypeService.cs" />
+    <Compile Include="DomainServices\IBillingcenterRepository.cs" />
+    <Compile Include="DomainServices\IDefectgoodRepository.cs" />
+    <Compile Include="DomainServices\IGRNDataRepository.cs" />
+    <Compile Include="DomainServices\IInvoiceRepository.cs" />
+    <Compile Include="DomainServices\Filtering\FilteredList.cs" />
+    <Compile Include="DomainServices\ICashierRepository.cs" />
+    <Compile Include="DomainServices\IEquipmentRepository.cs" />
+    <Compile Include="DomainServices\ILogRepository.cs" />
+    <Compile Include="DomainServices\IPurposeofuseRepository.cs" />
+    <Compile Include="DomainServices\IQuotationRepository.cs" />
+    <Compile Include="DomainServices\IReturngoodRepository.cs" />
+    <Compile Include="DomainServices\IStockMgtRepository.cs" />
+    <Compile Include="DomainServices\IStockRepository.cs" />
+    <Compile Include="DomainServices\ITaxRepository.cs" />
+    <Compile Include="DomainServices\ITransactionTypeRepository.cs" />
+    <Compile Include="DomainServices\IUnitOfWork.cs" />
+    <Compile Include="Entities\ACCOUNTCODE.cs" />
+    <Compile Include="Entities\BILLINGCENTER.cs" />
+    <Compile Include="Entities\CASHIER.cs" />
+    <Compile Include="Entities\COSTCENTER.cs" />
+    <Compile Include="Entities\DEFECTGOOD.cs" />
+    <Compile Include="Entities\EQUIPMENT.cs" />
+    <Compile Include="Entities\EQUIPMENTLIST.cs" />
+    <Compile Include="Entities\EQUIPMENTSERIAL.cs" />
+    <Compile Include="Entities\ERP_INIT_CHECK.cs" />
+    <Compile Include="Entities\ERP_INV_TRAN_TYPE.cs" />
+    <Compile Include="Entities\ERP_PURPOSEOFUSE.cs" />
+    <Compile Include="Entities\INVOICEDETAIL.cs" />
+    <Compile Include="Entities\INVOICEHEADER.cs" />
+    <Compile Include="Entities\OPERATIONSLOG.cs" />
+    <Compile Include="Entities\PRICEREVISION.cs" />
+    <Compile Include="Entities\QUOTATIONDETAIL.cs" />
+    <Compile Include="Entities\QUOTATIONHEADER.cs" />
+    <Compile Include="Entities\REASON.cs" />
+    <Compile Include="Entities\RETURNGOOD.cs" />
+    <Compile Include="Entities\RPTCURRENTSTOCKLEVEL.cs" />
+    <Compile Include="Entities\RPTDEFECTGOODS.cs" />
+    <Compile Include="Entities\RPTDEFECTRETURN.cs" />
+    <Compile Include="Entities\RPTDEFECTSUMMARY.cs" />
+    <Compile Include="Entities\RPTDISCOUNTEDSALES.cs" />
+    <Compile Include="Entities\RPTITEMSALES.cs" />
+    <Compile Include="Entities\RPTGoodsReceivedNotesDetails.cs" />
+    <Compile Include="Entities\RPTINVOICEHEADER.cs" />
+    <Compile Include="Entities\RPTINVOICESUMMARY.cs" />
+    <Compile Include="Entities\RPTQUOTATION.cs" />
+    <Compile Include="Entities\RPTRETURNGOODS.cs" />
+    <Compile Include="Entities\RPTRETURNNOTE.cs" />
+    <Compile Include="Entities\RPTINVOICE.cs" />
+    <Compile Include="Entities\RPTINVOICETAX.cs" />
+    <Compile Include="Entities\RPTRETURNSUMMARY.cs" />
+    <Compile Include="Entities\STOCK.cs" />
+    <Compile Include="Entities\STOCKMGT.cs" />
+    <Compile Include="Entities\SUPPLIER.cs" />
+    <Compile Include="Entities\TAX.cs" />
+    <Compile Include="Entities\VENDOR.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
